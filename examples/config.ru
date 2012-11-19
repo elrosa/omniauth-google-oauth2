@@ -14,7 +14,7 @@ class App < Sinatra::Base
   get '/' do
     <<-HTML
     <ul>
-      <li><a href='/auth/google_oauth2'>Sign in with Google</a></li>
+      <li><a href='/auth/google'>Sign in with Google</a></li>
     </ul>
     HTML
   end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'omniauth-google-oauth2'
 
-describe OmniAuth::Strategies::GoogleOauth2 do
+describe OmniAuth::Strategies::Google do
   def app; lambda{|env| [200, {}, ["Hello."]]} end
 
   before :each do
@@ -18,7 +18,7 @@ describe OmniAuth::Strategies::GoogleOauth2 do
 
   subject do
     args = ['appid', 'secret', @options || {}].compact
-    OmniAuth::Strategies::GoogleOauth2.new(app, *args).tap do |strategy|
+    OmniAuth::Strategies::Google.new(app, *args).tap do |strategy|
       strategy.stub(:request) { @request }
     end
   end
