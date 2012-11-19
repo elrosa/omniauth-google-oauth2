@@ -34,7 +34,7 @@ use Rack::Session::Cookie, :secret => ENV['RACK_COOKIE_SECRET']
 
 use OmniAuth::Builder do
   # Regular usage
-  provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
+  provider :google, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
   
   # Custom scope supporting youtube
   # provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {:scope => 'http://gdata.youtube.com,userinfo.email,userinfo.profile,plus.me', :access_type => 'online', :approval_prompt => ''}
