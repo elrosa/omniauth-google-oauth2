@@ -39,7 +39,7 @@ use Rack::Session::Cookie, :secret => ENV['RACK_COOKIE_SECRET']
 
 use OmniAuth::Builder do
   # For additional provider examples please look at 'omni_auth.rb'
-  provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
+  provider :google, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
 end
 
 run App.new
